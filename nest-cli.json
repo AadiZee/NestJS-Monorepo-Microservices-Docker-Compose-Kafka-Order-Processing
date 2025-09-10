@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/oder-processing-kafka/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/oder-processing-kafka/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/oder-processing-kafka",
+  "projects": {
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "api-gateway-e2e": {
+      "type": "application",
+      "root": "apps/api-gateway-e2e",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway-e2e/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway-e2e/tsconfig.app.json"
+      }
+    },
+    "notification-microservice": {
+      "type": "application",
+      "root": "apps/notification-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/notification-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/notification-microservice/tsconfig.app.json"
+      }
+    },
+    "oder-processing-kafka": {
+      "type": "application",
+      "root": "apps/oder-processing-kafka",
+      "entryFile": "main",
+      "sourceRoot": "apps/oder-processing-kafka/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/oder-processing-kafka/tsconfig.app.json"
+      }
+    },
+    "order-microservice": {
+      "type": "application",
+      "root": "apps/order-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/order-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order-microservice/tsconfig.app.json"
+      }
+    },
+    "payment-microservice": {
+      "type": "application",
+      "root": "apps/payment-microservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/payment-microservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/payment-microservice/tsconfig.app.json"
+      }
+    }
+  }
+}
